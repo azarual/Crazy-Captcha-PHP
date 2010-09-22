@@ -55,9 +55,9 @@ $font = imageloadfont ( './font.gdf' );
 
 // escreve as letras na imagem
 foreach ( $letters as $key => $letter):
-    	$text_color = imagecolorallocatealpha ( $im, rand ( 0, 100 ), rand ( 10, 100 ), rand ( 0, 100 ), rand ( 30, 60 ) );
-		$captcha_center = (($captcha_size[0] / 2) - ( $captcha_total_letters * 21 ) );
-		imagestring ( $im, $font,  $captcha_center + ( $key * 33 ) , 5 + rand ( 5, 20 ), $letter, $text_color );
+	$text_color = imagecolorallocatealpha ( $im, rand ( 0, 100 ), rand ( 10, 100 ), rand ( 0, 100 ), rand ( 30, 60 ) );
+	$captcha_center = (($captcha_size[0] / 2) - ( $captcha_total_letters * 21 ) );
+	imagestring ( $im, $font,  $captcha_center + ( $key * 33 ) , 5 + rand ( 5, 20 ), $letter, $text_color );
 endforeach;
 
 // armazena na sessão o MD5 da imagem que foi gerada
